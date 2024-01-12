@@ -1,6 +1,8 @@
 # custom_tigervnc_systemd_service_4_guacamole
 bash script and systemd service file to run said script at startup.
 
+*.service file must be placed in "/etc/systemd/system/" on the system running tigervnc (or any other variant).
+
 "ExecStart=/usr/bin/bash /root/startme.sh" in the *.service file denotes to use bash, and the file to be ran by the service with bash.
 
 Absolute paths must be used.
