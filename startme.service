@@ -1,0 +1,17 @@
+[Unit]
+Description=Start the vnc server with proper parameters
+After=syslog.target network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=forking
+
+ExecStart=/usr/bin/bash /root/startme.sh
+
+User=root
+
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
